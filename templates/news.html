@@ -1,9 +1,21 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <div id="nav-placeholder">
 </div>
+<div id='all-news'>
+News
+</div>
 <script>
 $(function(){
   $("#nav-placeholder").load("/static/nav.html");
   });
+const allnews = ['news1','news2','news3'];
+allnews.forEach(function(post){
+	$link = $('<div>')
+	.append(
+		$('<a>').attr({href:'/static/news/'+post+'.html'}).html(post)
+	)
+	.append($('<div>').load('/static/news/'+post+'.html'));
+	$('#all-news').append($link);
+});
 </script>
 this is news

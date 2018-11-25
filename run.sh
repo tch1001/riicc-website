@@ -1,5 +1,5 @@
 #! /bin/sh
 
-export FLASK_APP=server.py
+export FLASK_APP=meow.py
 export FLASK_ENV=development
-flask run
+flask run --port 5001
